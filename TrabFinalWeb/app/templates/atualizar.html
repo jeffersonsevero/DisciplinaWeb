@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <title>Atualizar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+   
+</head>
+<body>
+
+    <h1>Atualizar</h1>
+    <hr>
+    <form action="" method="POST">
+
+        <table>
+            <tr>
+                <td>Nome</td>
+                <td><input type="text" name="nome" value="{{pessoa.nome}}"></td>
+            </tr>
+<tr>
+                <td>Telefone</td>
+                <td><input type="text" name="telefone" value="{{pessoa.telefone}}"></td>
+            </tr>
+            
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" value="{{pessoa.email}}"></td>
+            </tr>
+
+            <tr>
+                <td>Valor</td>
+                <td><input type="text" name="valor" value="{{pessoa.valor}}"></td>
+            </tr>
+            
+        </table>
+        <input type="submit" value="Atualizar dados">
+
+    </form>
+    <a href="/index">Voltar</a>
+   
+
+
+    
+</body>
+</html>

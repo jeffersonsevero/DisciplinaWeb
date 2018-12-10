@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" /> 
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="{{url_for('static',  filename='css/styles.css')}}" />
+   
+</head>
+<body>
+
+    <h1>Lista de Devedores</h1>
+    <hr>
+    <table border="1" class="table table-striped table-bordered table-hover">
+        <header>
+            <tr>
+                
+                <td class="btn-success">ID</td>
+                <td class="btn-success">Nome</td>
+                <td class="btn-success">Telefone</td>
+                <td class="btn-success">CPF</td>
+                <td class="btn-success">Email</td>
+                <td class="btn-success">Valor</td>
+                <td class="btn-success">Excluir</td>
+                <td class="btn-success">Atualizar</td>
+                
+            </tr>
+        </header>
+        {% for pessoa in pessoas %}
+        <tr>
+            <td>{{pessoa._id}}</td>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.telefone}}</td>
+            <td>{{pessoa.cpf}}</td>
+            <td>{{pessoa.email}}</td>
+            <td>{{pessoa.valor}}</td>
+            <td><a href="/excluir/{{pessoa._id}}" class="btn-danger btn-lg">X</a></td>
+            <td><a href="/atualizar/{{pessoa._id}}" class="btn-warning btn-lg">Atualizar</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <a href="/index">Voltar</a>
+   
+
+
+    
+</body>
+</html>
